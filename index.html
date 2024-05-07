@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emboidery Scanner</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="title">
+        <h1>Sulam Global Enterprise</h1>
+    <p>Gunakan tetikus untuk menyeret dan klik dua kali untuk menyalin kod warna</p> </br>
+</div>
+    <canvas id="canvas" class="crosshair shadow thumb" height="500px" width="800px" ondblclick='getColorMouseClick(event)' onmousemove="getColorMouseMove(event)">
+    </canvas>
+    <div id="upload" class="shadow">
+        <label for="file" style="cursor: pointer;">Upload Image</label>
+        <div>
+            <span class="color"></span><p>Color Will Display Here</p>
+        </div>
+    </div>
+    <div class="recent-colors"></div>
+    <input type="file"  accept="image/*" id="file" style="display: none;" onchange="drawImageOnCanvas(event)">
+    <div class="notify shadow">Copied the Color Code: rgba(255, 255, 255,)</div>
+</body>
+<script src="./app.js"></script>
+</html>
